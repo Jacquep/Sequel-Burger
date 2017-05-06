@@ -6,8 +6,8 @@ module.exports = function(app) {
     app.get('/', function(request, response) {
 
     	model.findAll({})
-    	.then(function(allBurgersData){
-    		response.render('index', {allBurgersData});
+    	.then(function(burgers){
+    		response.render('index', {burgers});
     	})
     });
 }
